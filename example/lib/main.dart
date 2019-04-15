@@ -13,7 +13,8 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  final events = <String>[], controller = ScrollController();
+  final events = <String>["(Start pressing keys to see events)"],
+      controller = ScrollController();
 
   @override
   void initState() {
@@ -43,6 +44,7 @@ class _MyAppState extends State<MyApp> {
           title: const Text('Keyboard Plugin'),
         ),
         body: ListView(
+          shrinkWrap: true,
           controller: controller,
           children: events.map((it) {
             return ListTile(
