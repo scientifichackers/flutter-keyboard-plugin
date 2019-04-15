@@ -3,6 +3,7 @@
 A Flutter plugin to detect keyboard events on Android. Useful for non-touchscreen devices.
 
 [![Sponsor](https://img.shields.io/badge/Sponsor-jaaga_labs-red.svg?style=for-the-badge)](https://www.jaaga.in/labs)
+[![pub package](https://img.shields.io/pub/v/keyboard.svg?style=for-the-badge)](https://pub.dartlang.org/packages/keyboard/)
 
 ## Example
 
@@ -41,4 +42,4 @@ class MainActivity : KeyboardPluginActivity() {
 
 ---
 
-Then just follow the regular plugin installation on dart pub.
+Then just follow the regular plugin installation on [dart pub](https://pub.dartlang.org/packages/keyboard/#-installing-tab-).
