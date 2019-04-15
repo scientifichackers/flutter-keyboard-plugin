@@ -1,6 +1,6 @@
 name: keyboard
 description: Flutter plugin to detect keyboard events.
-version: 0.0.1
+version: 0.0.2
 author: Dev Aggarwal <devpxy@gmail.com>
 homepage: https://github.com/pycampers/flutter_pdf_viewer
 
