@@ -20,7 +20,7 @@ $ flutter run
 
 Since flutter plugins don't have access to the regular `Activity` events,
 you also, need to make a small change to the
-`android/app/src/main/kotlin/.../MainActivity.kt` file.
+`android/app/src/main/kotlin/.../MainActivity.kt` file in your project.
 
 Just replace `FlutterActivity()` by `KeyboardPluginActivity()`.
 
@@ -38,3 +38,7 @@ class MainActivity : KeyboardPluginActivity() {
     }
 }
 ```
+
+---
+
+Then just follow the regular plugin installation on dart pub.
