@@ -1,14 +1,17 @@
 # keyboard
 
-A new Flutter plugin.
+A Flutter plugin to detect keyboard events on Android. Useful for non-touchscreen devices.
 
-## Getting Started
+[![Sponsor](https://img.shields.io/badge/Sponsor-jaaga_labs-red.svg?style=for-the-badge)](https://www.jaaga.in/labs)
 
-This project is a starting point for a Flutter
-[plug-in package](https://flutter.io/developing-packages/),
-a specialized package that includes platform-specific implementation code for
-Android and/or iOS.
+## Example
 
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.io/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
+The example app can show detected events in a `ListView`.
+
+It's present in the usual `example` directory.
+
+```
+$ git clone https://github.com/devxpy/flutter-keyboard-plugin.git
+$ cd flutter-keyboard-plugin/example
+$ flutter run
+```

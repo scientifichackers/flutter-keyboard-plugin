@@ -1074,7 +1074,6 @@ class Keyboard {
       var args = call.arguments;
       switch (call.method) {
         case "onKeyDown":
-          print([args[0], KeyEvent.fromMsg(args[1]), onKeyDown]);
           if (onKeyDown == null) break;
           onKeyDown(args[0], KeyEvent.fromMsg(args[1]));
           break;
