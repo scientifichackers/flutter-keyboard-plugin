@@ -1064,18 +1064,24 @@ typedef void OnKeyUp(int keyCode, KeyEvent event);
 const MethodChannel _channel = MethodChannel('com.pycampers.keyboard');
 
 class Keyboard {
-  static OnKeyDown onKeyDown;
-  static OnKeyLongPress onKeyLongPress;
-  static OnKeyMultiple onKeyMultiple;
-  static OnKeyUp onKeyUp;
+  static final List<OnKeyDown> onKeyDown = [];
+  static final List<OnKeyLongPress> onKeyLongPress = [];
+  static final List<OnKeyMultiple> onKeyMultiple = [];
+  static final List<OnKeyUp> onKeyUp = [];
 
   static void init() {
     _channel.setMethodCallHandler((call) {
       var args = call.arguments;
       switch (call.method) {
         case "onKeyDown":
-          if (onKeyDown == null) break;
-          onKeyDown(args[0], KeyEvent.fromMsg(args[1]));
+          try {
+            var evt = KeyEvent.fromMsg(args[1]);
+            for (var value in onKeyDown) {
+              value(args[0], evt);
+            }
+          } catch (e, trace) {
+            print("$e\n$trace");
+          }
           break;
         case "onKeyLongPress":
           if (onKeyLongPress == null) break;
