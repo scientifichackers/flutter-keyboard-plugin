@@ -3,7 +3,6 @@ import 'package:keyboard/keyboard.dart';
 import 'package:flutter/scheduler.dart';
 
 void main() {
-  Keyboard.init();
   runApp(MyApp());
 }
 
@@ -19,6 +18,7 @@ class _MyAppState extends State<MyApp> {
   @override
   void initState() {
     super.initState();
+    Keyboard.init();
     Keyboard.onKeyDown.add((code, event) {
       if (!mounted) return;
       setState(() {
